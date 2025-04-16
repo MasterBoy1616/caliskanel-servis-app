@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://caliskanel-servis-app-1.onrender.com";
+axios.defaults.baseURL = "https://caliskanel-servis-api.onrender.com";
+
 
 
 
