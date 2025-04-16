@@ -1,4 +1,9 @@
 import React from "react";
+import FiyatSorgulama from "./FiyatSorgulama";
+export default function App() {
+  return <FiyatSorgulama />;
+}
+
 
 function App() {
   return (
