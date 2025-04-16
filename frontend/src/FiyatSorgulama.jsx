@@ -2,6 +2,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+axios.defaults.baseURL = "https://caliskanel-servis-app-1.onrender.com";
+
+
+
 export default function FiyatSorgulama() {
   const [brands, setBrands] = useState([]);
   const [models, setModels] = useState([]);
