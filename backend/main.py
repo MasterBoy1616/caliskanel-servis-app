@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 import pandas as pd
-@app.get("/")
-def root():
-    return {"message": "API çalışıyor"}
 
-app = FastAPI()
+app = FastAPI()  # BU SATIR ÖNCE GELMELİ
 
 excel_path = "yeni_bosch_fiyatlari.xlsm"
 sheets = pd.read_excel(excel_path, sheet_name=None)
+@app.get("/")
+def root():
+    return {"message": "Çalışkanel Backend API ayakta 🔧"}
+
 
 @app.get("/api/brands")
 def get_brands():
