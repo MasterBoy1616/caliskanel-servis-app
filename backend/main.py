@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 import pandas as pd
+@app.get("/")
+def root():
+    return {"message": "API çalışıyor"}
 
 app = FastAPI()
 
