@@ -1,7 +1,18 @@
+from fastapi.middleware.cors import CORSMiddleware
+
 from fastapi import FastAPI
 import pandas as pd
 
 app = FastAPI()  # BU SATIR ÖNCE GELMELİ
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # istersen buraya sadece frontend adresini yazabilirsin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 excel_path = "yeni_bosch_fiyatlari.xlsm"
 sheets = pd.read_excel(excel_path, sheet_name=None)
